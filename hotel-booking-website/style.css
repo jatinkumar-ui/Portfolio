@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-primary {
+  background: #e53935;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 25px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://c4.wallpaperflare.com/wallpaper/624/380/1000/life-resort-hotel-resort-hotel-wallpaper-preview.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.hero-content p {
+  color: #fff;
+  margin: 10px 0;
+}
+
+/* BOOKING BOX */
+.booking-box {
+  background: #fff;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 6px;
+}
+
+.booking-box input,
+.booking-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* WELCOME */
+.welcome {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.room-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.room-cards img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* CHOOSE US */
+.choose-us {
+  background: #222;
+  color: #fff;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* EVENTS */
+.events {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.event img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #bbb;
+  padding: 60px;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+footer input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+copyright {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* PRIMARY BUTTONS */
+.btn-primary {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.gallery-item img,
+.room-cards img,
+.event img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item:hover img,
+.room-cards .card:hover img,
+.event:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content {
+  animation: fadeUp 1s ease forwards;
+}
+
+.booking-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 80px 60px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ICON */
+.service-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about {
+  padding: 80px 60px;
+  background: #fff;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+/* IMAGE */
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.08);
+}
+
+/* CONTENT */
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  gap: 30px;
+}
+
+.stat {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+  font-size: 28px;
+  color: #e53935;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #555;
+}
+
+/* ===== TESTIMONIAL SECTION ===== */
+.testimonials {
+  padding: 80px 60px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.testimonial-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.testimonial-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.testimonial-card h3 {
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #fbc02d;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.events {
+  padding: 80px 10%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.event-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background: #fff;
+  width: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 20px;
+}
+
+.event-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.event-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.event-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #ff6b6b;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.event-btn:hover {
+  background: #e63946;
+}
